@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "549a4d81-ae10-45f2-bce8-5329c24568b6",
+		"name": "Корзина http://bezrukovyra-wordpress-2.tw1.ru/",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Удаление товара из корзины",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb9a573a-f922-4368-a767-3b01ad0c8d90",
+						"exec": [
+							"pm.test(\"Удаление товара из корзины\", function () {pm.expect(pm.response.text()).to.include(\"Ваша корзина пока пуста\");})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "remove_item=6f4922f45568161a8cdf4ad2299f6d23&_wpnonce=5f054ef45a"
+				},
+				"url": {
+					"raw": "http://bezrukovyra-wordpress-2.tw1.ru/cart/?remove_item=6f4922f45568161a8cdf4ad2299f6d23&_wpnonce=5f054ef45a",
+					"protocol": "http",
+					"host": [
+						"bezrukovyra-wordpress-2",
+						"tw1",
+						"ru"
+					],
+					"path": [
+						"cart",
+						""
+					],
+					"query": [
+						{
+							"key": "remove_item",
+							"value": "6f4922f45568161a8cdf4ad2299f6d23"
+						},
+						{
+							"key": "_wpnonce",
+							"value": "5f054ef45a"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "7RfbnSvH",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"protocolProfileBehavior": {}
+}
